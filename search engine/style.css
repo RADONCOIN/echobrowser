@@ -1,0 +1,191 @@
+body{
+	background-image:url("BG.jpg");
+	background-repeat:no-repeat;
+	background-size: cover;
+
+	
+  	text-align: center;
+  	height: 100%;
+ 	margin:0;
+ 	padding:0;
+}
+html{
+		background-image: linear-gradient(to bottom right, #157145, #57A773);
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 50px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color:#111;
+  opacity: 0.1;
+}
+
+
+.svg-wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+	  margin: 0 auto;
+  width: 320px;  
+}
+.shape {
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  fill: transparent;
+  stroke:red;
+  border-bottom: 5px solid black;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+.text {
+  font-family: 'Roboto Condensed';
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 8px;
+  color: #fff;
+  top: -48px;
+  position: relative;
+}
+.svg-wrapper:hover .shape {
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 760;
+}
+/*hoi*/
+.pricingdiv{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  position: relative;
+  top: 50vh;
+}
+
+.pricingdiv ul.theplan{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color: white;
+  background: #7c3ac9;
+  position: relative;
+  width: 250px; /* width of each table */
+  margin-right: 10px; /* spacing between tables */
+  margin-bottom: 1em;
+  transition: all .5s;
+}
+
+.pricingdiv ul.theplan:hover{ /* when mouse hover over pricing table */
+  transform: scale(1.05);
+  transition: all .5s;
+  z-index: 100;
+  box-shadow: 0 0 10px gray;
+}
+
+.pricingdiv ul.theplan li{
+  margin: 10px 20px;
+  position: relative;
+}
+
+.pricingdiv ul.theplan li.title{
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  text-transform: uppercase;
+  border-bottom: 5px solid white;
+}
+
+.pricingdiv ul.theplan:nth-of-type(2){
+  background: #e53499;
+}
+    
+.pricingdiv ul.theplan:nth-of-type(3){
+  background: #2a2cc8;
+}
+
+.pricingdiv ul.theplan:last-of-type{ /* remove right margin in very last table */
+  margin-right: 0;
+}
+
+
+.pricingdiv ul.theplan li:last-of-type{
+  text-align: center;
+  margin-top: auto; /*align last LI (price botton li) to the very bottom of UL */
+}  
+
+.pricingdiv a.pricebutton{
+  background: white;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+  margin: 10px auto;
+  border-radius: 5px;
+  color: navy;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 500px) {
+  .pricingdiv ul.theplan{
+    border-radius: 0;
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .pricingdiv ul.theplan:hover{
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .pricingdiv a.pricebutton{
+    display: block;
+  }
+}
+.search{
+
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+	width: 75vw;
+	height: 7vh;
+  position: relative;
+  top: 70VH;
+  left: -25vw;
+  text-align: center;
+}
+
+.Ne{
+	position: absolute;
+}
+#lijstje{
+	position: absolute;
+	top: 1vh;
+}
+
+#settings{
+
+position: relative;
+top: 500px;
+
+
+                                                                          \ 
+}
