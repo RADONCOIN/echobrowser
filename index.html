@@ -1,0 +1,131 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Searchify | Search Engine for Products & High Quality Information Sources</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+	
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#peep">About</a></li>
+</ul>
+
+<div class="svg-wrapper" id="wegermee">
+  <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+    <rect class="shape" height="60" width="320" />
+	 
+    <div class="text">SEARCHIFY</div>
+
+    <div class="pricingdiv">
+	<ul class="theplan">
+		<li class="title"><b>Amazing Searches</b></li>
+		<li class="ethighlight"><b>High Quality</b></li>
+		<li><b>Save:</b> Search Secure</li>
+		<li><b>Trusted Service</b></li>
+		<li><b>Design</b></li>
+		<li><b>Fast Answers</b> </li>
+		<li><b>Working on A chatbot:</b> <span class="icon-close"></span></li>
+		<li><b>FREE</b> <span class="icon-check"></span></li>
+	
+		<li><input type="text" name="fname" class="pricebutton" placeholder="Search Now"><button onclick="search()">Search Now</button></li>
+	</ul>
+</div>
+<div class="search" id="laatzien">
+	<input type="text" name="fname" placeholder="Search Now" id="textinput">
+	<button onclick="search()">Search Now</button>
+	 <p id="antwoord"></p>
+     <ul id='lijstje'>
+         
+     </ul>
+	</div>
+
+
+<!-- Saerch -->
+<script type="text/javascript">
+	
+
+
+
+
+		function search(){
+var x = document.getElementById("textinput").value.toLowerCase();
+$('#lijstje').empty();
+var stringArray = x.split(' ');
+
+// http://www.convertcsv.com/csv-to-json.htm 
+var words = [
+        
+        {
+            'vertaling':'https://www.amazon.com/gp/product/B07PXGQC1Q/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07PXGQC1Q&linkCode=as2&tag=searchify01b-20&linkId=93cfa5f1bd162035a34597ce42ac5356',
+            'stam': 'airpods',
+            'stam2': 'music',
+            'stam3': 'apple',
+            'tekstlink': 'Airpods Apple '
+        },
+
+        {
+            'vertaling':'https://www.amazon.com/gp/product/B07GHWHFR5/ref=as_li_ss_tl?ie=UTF8&th=1&linkCode=ll1&tag=searchify01b-20&linkId=f6967efee39ae95267d280c181df0641',
+            'stam': 'controller',
+            'stam2': 'gaming',
+            'stam3': 'xbox',
+            'tekstlink': 'Xbox Wireless Controller - Grey And Blue $49.88'
+        },
+          {
+            'vertaling':'https://www.amazon.com/PlayStation-Slim-1TB-Console-Fortnite/dp/B07VJWMQ5T/ref=as_li_ss_tl?crid=3S5VZPW7FCT29&keywords=playstation+4&qid=1581009194&sprefix=plays,aps,247&sr=8-4&linkCode=ll1&tag=searchify01b-20&linkId=099b25645ab66fe3f831482d153dc5d2',
+            'stam': 'console',
+            'stam2': 'play station',
+            'stam3': 'ps4',
+            'tekstlink': 'PlayStation 4 Slim 1TB Console - Fortnite Bundle $250.99'
+        },
+ 
+]
+
+
+
+for(i=0; i < stringArray.length; i++) {
+    
+    
+    var zoekWoord = stringArray[i];
+    
+    for(u=0; u < Object.keys(words).length; u++) {
+        if(zoekWoord.startsWith(words[u].stam) || zoekWoord.startsWith(words[u].stam2) || zoekWoord.startsWith(words[u].stam3) ) {
+            voegToeAanLijst(words[u].vertaling, words[u].tekstlink);
+        }
+       
+    }
+}
+
+}
+//eindigt de functie
+
+// Voeg het woord toe aan de lijst 
+function voegToeAanLijst(woord, tekst) {
+	var ul = document.getElementById("lijstje");
+	var a = document.createElement("a");
+	var br = document.createElement("br");
+	var linkText = document.createTextNode(tekst);
+	a.appendChild(linkText);
+	a.title = woord;
+	a.href = woord;
+	ul.appendChild(a);
+	ul.appendChild(br)
+
+}
+
+
+	
+
+
+
+
+
+
+</script>
+</body>
+	
+</html>
