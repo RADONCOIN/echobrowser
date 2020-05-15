@@ -13,11 +13,28 @@ var result2;
 for (i = 2; i < res.length; i++) {
  	
 
- 	resultaat = resultaat +  "{'vertaling':"+"'https://"+res[i]+"','stam':'"+res[i]+"','stam2':'"+res[i]+"','stam3':'"+res[i]+"','tekstlink':'"+res[i]+"'},";
-	
 
-	// result2=resultaat.split(' ')
-	// resultaat=result2;
+
+ 	var e=res[i].split('.')
+
+ 	e=e.toString();
+ 	e=e.replace("www", "");
+ 	e=e.replace(',',"")
+ 	e=e.replace(',',"")
+ 		e=e.replace(',',"")
+ 			e=e.replace(',',"")
+ 	e=e.replace('com',"")
+ 	e=e.split('/');
+
+	console.log(e)
+	if(e[0]===undefined){
+		e.slice([0[0]])
+		console.log('sliced!')
+	}
+
+	
+	resultaat = resultaat +  "{'vertaling':"+"'https://"+res[i]+"','stam':'"+e[0]+"','stam2':'"+e[1]+"','stam3':'"+e[2]+"','tekstlink':'"+res[i]+"'},";
+ 	// https://pt-br.facebook.com/pages/category/dvd-video-store/
 	resultaat = resultaat.replace(/\s/g, '');
 	$( "#tekst" ).text(resultaat);
 }
