@@ -12,7 +12,7 @@ var resultaat="{";
 for (i = 1; i < res.length; i++) {
  	
 
- 	resultaat = resultaat + "{'vertaling':"+"'"+"https://"+res[i]+"',"+"'stam':'"+res[i]+"',"+"'stam2':'"+res[i]+"','stam3':'"+res[i]+"',"+"'tekstlink':'"+res[i]+"'},";
+ 	resultaat = resultaat + "{'vertaling':"+"'"+"https://"+res[i]+"',\n"+"'stam':'"+res[i]+"',\n"+"'stam2':'"+res[i]+"',\n'stam3':'"+res[i]+"',\n"+"'tekstlink':'"+res[i]+"'},\n";
 		 $( "#tekst" ).text(resultaat);
  	 // {
    //          'vertaling':'https://www.amazon.com/gp/product/B07PXGQC1Q/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07PXGQC1Q&linkCode=as2&tag=searchify01b-20&linkId=93cfa5f1bd162035a34597ce42ac5356',
