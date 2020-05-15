@@ -4,7 +4,7 @@
 function start(){
 var resultaat="";
 var result2;
-	var str = $( "#tekst" ).text();
+	var str = prompt("input graag")
 
 	var res = str.split('https://');
 
@@ -13,7 +13,7 @@ var result2;
 for (i = 2; i < res.length; i++) {
  	
 
- 	resultaat =  "{'vertaling':"+"'https://"+res[i]+"','stam':'"+res[i]+"','stam2':'"+res[i]+"','stam3':'"+res[i]+"','tekstlink':'"+res[i]+"'},";
+ 	resultaat = resultaat +  "{'vertaling':"+"'https://"+res[i]+"','stam':'"+res[i]+"','stam2':'"+res[i]+"','stam3':'"+res[i]+"','tekstlink':'"+res[i]+"'},";
 	
 
 	// result2=resultaat.split(' ')
