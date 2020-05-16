@@ -7,9 +7,7 @@
     <title>Searchify | Search Engine for Products & High Quality Information Sources</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
-
 <body>
-    
 <ul>
   <li><a class="active" href="#home">Home</a></li>
   <li><a href="#peep">About</a></li>
@@ -30,19 +28,6 @@
         <br>
         But you can change the world!
         <a href="#settings">Go to settings</a>
-<!--     <div class="pricingdiv">
-    <ul class="theplan">
-        <li class="title"><b>Amazing Searches</b></li>
-        <li class="ethighlight"><b>High Quality</b></li>
-        <li><b>Save:</b> Search Secure</li>
-        <li><b>Trusted Service</b></li>
-        <li><b>Design</b></li>
-        <li><b>Fast Answers</b> </li>
-        <li><b>Working on A chatbot:</b> <span class="icon-close"></span></li>
-        <li><b>FREE</b> <span class="icon-check"></span></li>
-    
-        <li><input type="text" name="fname" class="pricebutton" placeholder="Search Now"><button onclick="search()">Search Now</button></li>
-    </ul> -->
 </div>
 <div class="search" id="laatzien">
     <input type="text" name="fname" placeholder="Search Now" id="textinput">
@@ -51,7 +36,7 @@
      <ul id='lijstje'>
          
      </ul>
-    </div>
+</div>
 
 
 
@@ -64,15 +49,17 @@
 
 <!-- Saerch -->
 <script type="text/javascript">
-    
+    $(document).ready(function() {
+     $("ul").attr({"target" : "_blank"})
+})
 
 
 
 
-        function search(){
-var x = document.getElementById("textinput").value.toLowerCase();
-$('#lijstje').empty();
-var stringArray = x.split(' ');
+	function search(){
+	var x = document.getElementById("textinput").value.toLowerCase();
+	$('#lijstje').empty();
+	var stringArray = x.split(' ');
 
 // http://www.convertcsv.com/csv-to-json.htm 
 var words = [
@@ -115,12 +102,16 @@ function voegToeAanLijst(woord, tekst) {
     var a = document.createElement("a");
     var br = document.createElement("br");
     var linkText = document.createTextNode(tekst);
-    a.appendChild(linkText);
+    var aantalkinderen = ul.childElementCount;
+    if(aantalkinderen<100){
+    	 a.appendChild(linkText);
     a.title = woord;
     a.href = woord;
     ul.appendChild(a);
     ul.appendChild(br)
-
+    a.target="_blank"
+    }
+   
 }
 
 
