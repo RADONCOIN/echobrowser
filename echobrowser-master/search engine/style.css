@@ -1,3 +1,13 @@
+.topSearch{
+  position:fixed;
+  top:12px;
+  left: 30vw;
+  
+}
+
+a {
+  text-decoration: none;
+}
 body{
 	background-image:url("BG.jpg");
 	background-repeat:no-repeat;
@@ -10,34 +20,38 @@ body{
  	padding:0;
 }
 html{
+    scroll-behavior: smooth;
 		background-image: linear-gradient(to bottom right, #157145, #57A773);
 }
 ul {
+  position: absolute;
   list-style-type: none;
-  margin: 0;
+  margin: 10px;
   padding: 0;
-  overflow: hidden;
 
+  text-align: left;
+  height: 200px;
 }
 
 li {
   float: left;
 }
 
-li a {
+#hijd {
   display: block;
   color: white;
   transition: transform .2s;
-  text-align: center;
+  position: relative;
+  margin-top: 1px;
   padding: 14px 50px;
-  text-decoration: none;
 
 
 }
-li a:hover {
+#hijd:hover {
   -ms-transform: scale(1.5); /* IE 9 */
   -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.5); 
+  text-decoration: none;
 }
 
 
@@ -176,17 +190,20 @@ li a:hover {
 	position: absolute;
 }
 #lijstje{
-	position: absolute;
-	top: 1vh;
+	position: relative;
+	top: 10vh;
+  left: 5vw;
+  margin-top: 4px;
 }
 
 #settings{
 
 position: relative;
 top: 500px;
-
-
-                                                                          \ 
+                                                                          
+}
+ul{
+  text-align: left;
 }
 
 .crypto{
@@ -200,3 +217,30 @@ transition: transform .2s;
   transform: scale(1.5); 
 }
 
+
+.linksvansearch{
+  display: block;
+  position: relative;
+  margin-top: 1px;
+  padding: 4px;
+  z-index: 999;
+
+}
+.linksvansearch:hover{
+  text-decoration: underline;
+}
+
+#showmore{
+  position: relative;
+  top: 80vh;
+  z-index: 1000;
+}
+#showless{
+  position: relative;
+  top: 80vh;
+  z-index: 1000;
+}
+
+#wrapper{
+  position: relative;
+}

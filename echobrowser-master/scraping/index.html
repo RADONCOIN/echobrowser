@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>This is the page title</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web Help">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta charset="utf-8">
+  <script>
+    var titletagsz = new Array;
+    var res = ["https://google.com", "https://reddit.com","https://youtube.com","https://youtu.be/TSOWkizLbw8","https://www.air-view.ch","http://www.srf3.ch","https://www.facebook.com/srfkultur/","https://buy-snapchat-accounts.com"]
+
+    for (var i = 0; i < res.length; i++) {
+       fetch( "https://cors-anywhere.herokuapp.com/"+res[i])
+          .then(function(response) {
+            return (response.text());
+          })
+          .then(function(responseText) {
+            var parsedResponse = (new window.DOMParser()).parseFromString(responseText, "text/html");
+            titletagsz.push(parsedResponse.title) ;
+            console.log(titletagsz)
+          });
+    }
+
+
+  </script>
+</head>
+
+<body>
+
+  <div>This text is visible to the user.</div>
+  <div>So <i>is</i>  <b>this</b>.</div>
+  <hr>
+  <b>Results:</b>
+  <ul id="results">
+    <li id="title"></li>
+    <li id="keywords"></li>
+    <li id="visibleText"></li>
+  </ul>
+
+</body>
+
+</html>
